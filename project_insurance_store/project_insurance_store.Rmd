@@ -27,4 +27,6 @@ use_condaenv("C:/Users/zhong/Anaconda3")
 
 source_python("./library/downloader.py")
 
+urllib <- import("urllib")
+
 ```
