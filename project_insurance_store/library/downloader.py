@@ -1,7 +1,7 @@
 import urllib
 
-def getFile(url,path_name,file_name):
-    file_name = path_name + file_name + '.pdf'
+def getpdfFile(url,file_name):
+    file_name = file_name + '.pdf'
     u = urllib.request.urlopen(url)
     f = open(file_name, 'wb')
 
