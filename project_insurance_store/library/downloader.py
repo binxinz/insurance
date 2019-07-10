@@ -1,6 +1,6 @@
 import urllib
 
-def getpdfFile(url,file_name):
+def shan_get_pdfFile(url,file_name):
     file_name = file_name + '.pdf'
     u = urllib.request.urlopen(url)
     f = open(file_name, 'wb')

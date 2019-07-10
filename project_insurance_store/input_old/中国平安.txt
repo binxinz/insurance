@@ -1,4 +1,4 @@
-company_name,product_contract_link,product_end_date,product_id,product_name,product_price_link,product_sale_status,product_start_date,product_type
+﻿company_name,product_contract_link,product_end_date,product_id,product_name,product_price_link,product_sale_status,product_start_date,product_type
 中国平安,http://life.pingan.com/upload/20180710001.pdf,,668,平安汇赢人生团体年金保险（投资连结型）,,在售,2018-06-30,团险
 中国平安,http://life.pingan.com/upload/20100630184042248.pdf,2013-06-15,665,平安长期综合健康团体医疗保险,,停售,,团险
 中国平安,http://life.pingan.com/upload/2010063018360277.pdf,2012-01-01,258,平安意外伤害保险,,停售,,团险
