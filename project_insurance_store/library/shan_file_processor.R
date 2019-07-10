@@ -8,7 +8,7 @@ shan_read_dir_csv<-function(path_out){
   
   for( file in filepath ){  
     #调用python读取csv
-    dat <- shan_read_csv(file)
+    dat <- shan_python_read_csv(file)
     dat<-matrix(unlist(dat), nrow=length(dat), byrow=T)
 
     dat1<-data.table(dat[-1,])

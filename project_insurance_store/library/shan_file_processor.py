@@ -44,7 +44,7 @@ def shan_copy_file(from_path:str,to_path:str):
         else :
                 continue
             
-def shan_read_csv(filepath:str,Encode="utf-8") -> list:
+def shan_python_read_csv(filepath:str,Encode="utf-8") -> list:
 
     with open(filepath,"r",encoding=Encode) as csvfile:
         #读取csv文件，返回的是迭代类型

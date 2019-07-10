@@ -31,6 +31,7 @@ source(paste0(wd,"/shan_cn_language_packages/shan_stringr/shan_stringr_functions
 # 引入python下载器与文件处理器
 source_python("./library/downloader.py")
 source_python("./library/shan_file_processor.py")
+source("./library/shan_file_processor.R")
 # 引入python os包
 os <- import('os')
 
@@ -58,12 +59,17 @@ shan_move_file(path_in,path_out)
 
 dat<-shan_read_dir_csv(path_out)
 
-saveRDS(dat, "./input_old/city.rds")
+saveRDS(dat, "./input_old/output.rds")
+
+dat
+```
+
+# 第三步,分各个公司下载所有的保险条款
+
+```{r summarizefile}
 
 
 ```
-
-
 
 
 
