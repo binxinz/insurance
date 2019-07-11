@@ -67,6 +67,13 @@ dat
 
 ```{r summarizefile}
 
+folder_path <-paste(wd1,"\\project_insurance_store\\output_contract\\",as.character(dat$company_name),sep="") 
+      
+folder_path %<>% .[!duplicated(folder_path)] 
+
+shan_make_dir(folder_path)
+
+path_out<-paste(wd1,"\\project_insurance_store\\output_contract\\",as.character(dat$company_name),as.character(dat$product_name),sep="")
 
 
 ```

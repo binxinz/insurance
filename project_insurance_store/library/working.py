@@ -18,3 +18,6 @@ def doSaveAas(filein,fileout):
 def shan_get_first_word(doc):
     file=docx.Document(doc)
     return file.paragraphs[0].text
+
+
+
