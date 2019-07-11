@@ -12,7 +12,7 @@ output: pdf_document
 wd<-"E:/insurance"
 
 #检查并安装package
-packages.used <- c("stringr","data.table","xlsx","reticulate","cluster")
+packages.used <- c("stringr","data.table","xlsx","reticulate","cluster","magrittr")
 
 # check packages that need to be installed.
 packages.needed <- setdiff(packages.used, intersect(installed.packages()[,1], packages.used))
@@ -22,7 +22,7 @@ if(length(packages.needed) > 0) {
   install.packages(packages.needed, dependencies = TRUE, repos = 'http://cran.us.r-project.org')
 }
 
-library("data.table");library("stringr");library("xlsx");library("reticulate");library("cluster")
+library("data.table");library("stringr");library("xlsx");library("reticulate");library("cluster");library("magrittr")
 
 # 找到Anaconda3 路径
 use_condaenv("C:/Users/zhong/Anaconda3")
@@ -32,9 +32,8 @@ source(paste0(wd,"/shan_cn_language_packages/shan_stringr/shan_stringr_functions
 source_python("./library/downloader.py")
 source_python("./library/shan_file_processor.py")
 source("./library/shan_file_processor.R")
-# 引入python os包
+# 引入python os, urllib包
 os <- import('os')
-
 urllib <- import("urllib")
 
 ```
@@ -69,7 +68,16 @@ dat
 ```{r summarizefile}
 
 
+
 ```
+
+
+
+
+
+
+
+
 
 
 
