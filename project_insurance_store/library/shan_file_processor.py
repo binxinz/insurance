@@ -52,3 +52,11 @@ def shan_python_read_csv(filepath:str,Encode="utf-8") -> list:
         output = list(reader)
 
         return(output)  
+        
+def shan_get_file_name(file_dir):   
+    L=[]   
+    for dirpath, dirnames, filenames in os.walk(file_dir):  
+        for file in filenames :  
+            if (os.path.splitext(file)[1] == '.doc') or (os.path.splitext(file)[1] == '.pdf'):  
+                L.append(os.path.join(dirpath, file))  
+    return L

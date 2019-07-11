@@ -1,35 +1,20 @@
+import sys
+import pickle
+import re
+import  codecs
+import string
+import shutil
+from win32com import client as wc
+import docx
 
 
-file_dir = "E:\\insurance\\shan_cn_language_packages"
-
-def work_dir(file_dir):
-    for root, dirs, files in os.walk(file_dir):
-        print ( "root : {0}".format(root) )
-        print ( "dirs : {0}".format(dirs) )
-        print ( "files : {0}".format(files) )
-
-import os
-        
+def doSaveAas(filein,fileout):   
+    word = wc.Dispatch('Word.Application')
+    doc = word.Documents.Open(filein)        # 目标路径下的文件
+    doc.SaveAs(fileout, 12, False, "", True, "", False, False, False, False)  # 转化后路径下的文件    
+    doc.Close()
+    word.Quit()
     
-def file_name(file_dir,file_kind="all"):   
-    L=[]   
-    for dirpath, dirnames, filenames in os.walk(file_dir):  
-        for file in filenames :  
-            if os.path.splitext(file)[1] == '.R':  
-                L.append(os.path.join(dirpath, file))  
-    return L
-           
-
-file_dir
-
-file_name(file_dir)
-
-
-True or False
-
-
-haha = os.walk(file_dir)
-
-haha.dirpath
-          
-work_dir(file_dir)
+def shan_get_first_word(doc):
+    file=docx.Document(doc)
+    return file.paragraphs[0].text
