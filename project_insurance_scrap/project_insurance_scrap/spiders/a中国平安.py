@@ -5,6 +5,8 @@ from project_insurance_scrap.items import  ProjectInsuranceScrapItem
 class A中国平安Spider(scrapy.Spider):
     name = '中国平安'
     
+    #http://life.pingan.com/gongkaixinxipilu/baoxianchanpinmulujitiaokuan.jsp
+    
     def start_requests(self):
         danren_urls = [
             'http://life.pingan.com/life_insurance/elis.pa18.commonQuery.visit?requestid=com.palic.elis.pos.intf.biz.action.PosQueryAction.queryPlanClause&SALES_STATUS=01',

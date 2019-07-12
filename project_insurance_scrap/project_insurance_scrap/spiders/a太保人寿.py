@@ -5,7 +5,9 @@ from project_insurance_scrap.items import  ProjectInsuranceScrapItem
 
 class A太保人寿Spider(scrapy.Spider):
     name = "太保人寿"
-
+    
+    #http://life.cpic.com.cn/xrsbx/gkxxpl/jbxx/gsgk/jydbxcpmljtk/?subMenu=1&inSub=3
+    
     def start_requests(self):
         
         header = {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
